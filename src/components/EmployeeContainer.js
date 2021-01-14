@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Jumbotron } from "react-bootstrap";
 import API from "../utils/API"
 import Header from "./Header/Header"
+import Table from "./Table/Table"
 
 class EmployeeContainer extends Component {
     state = {
@@ -21,7 +22,7 @@ class EmployeeContainer extends Component {
     render() {
         return(
             <Header/>
-            
+            // <Table/>
         )
     }
 
