@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Jumbotron } from "react-bootstrap";
 import API from "../utils/API"
+import Header from "./Header/Header"
 
 class EmployeeContainer extends Component {
     state = {
@@ -18,9 +20,7 @@ class EmployeeContainer extends Component {
 
     render() {
         return(
-            <h1>Hello 
-                {console.log(this.state.employees)}
-            </h1>
+            <Header/>
             
         )
     }
