@@ -21,7 +21,7 @@ const Employees = () => {
                     <li className="list-group-item" key={item.id}>{item.name.first}</li>
                 ))}
             </ul> */}
-            <Table striped bordered hover variant="dark">
+            <Table className="text-center" striped bordered hover variant="dark">
                 <thead>
                     <tr>
                     <th>#</th>
@@ -34,16 +34,20 @@ const Employees = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td>1</td>
-                    <td>image</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>703-555-1234</td>
-                    <td>mark.ott@paydirt.com</td>
-                    <td>08/20/1990</td>
-                    </tr>
-                    <tr>
+                    {employees.map(item => (
+                        <tr>
+                            <td>1</td>
+                            <td> <img src={item.picture.medium} 
+                                      alt={`{${item.name.firstname}_${item.name.last}}`}></img>
+                            </td>
+                            <td>{item.name.first}</td>
+                            <td>{item.name.last}</td>
+                            <td>{item.phone}</td>
+                            <td>{item.email}</td>
+                            <td>{item.dob.date}</td>
+                        </tr>
+                    ))}
+                    {/* <tr>
                     <td>2</td>
                     <td>image</td>
                     <td>Karen</td>
@@ -51,7 +55,7 @@ const Employees = () => {
                     <td>703-555-2323</td>
                     <td>karen.smith@paydirt.com</td>
                     <td>07/08/1995</td>
-                    </tr>
+                    </tr> */}
                 </tbody>
                 </Table>
         </div>
